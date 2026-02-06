@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Label } from "@/components/ui/label";
 import {
   Phone,
   Mail,
   MapPin,
   Clock,
-  User,
-  Building,
-  MessageSquare,
-  Send,
+  // User,
+  // Building,
+  // MessageSquare,
+  // Send,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -66,6 +66,8 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -95,6 +97,9 @@ export default function Contact() {
     });
     setIsSubmitting(false);
   };
+
+
+  console.log(isSubmitting , handleSubmit , handleChange);
 
   return (
     <div className="min-h-screen pt-28">
@@ -158,7 +163,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
+            {/* <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-brand-dark mb-2">
                 Send Us a Message
               </h2>
@@ -291,7 +296,7 @@ export default function Contact() {
                   )}
                 </Button>
               </form>
-            </div>
+            </div> */}
 
             {/* Office Locations */}
             <div>
