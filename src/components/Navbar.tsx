@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Services', path: '/services' },
-  { name: 'About', path: '/about' },
-  { name: 'Contact', path: '/contact' },
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
 ];
 
 export default function Navbar() {
@@ -19,8 +19,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -33,17 +33,25 @@ export default function Navbar() {
       <div className="bg-brand-blue py-2 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-white text-sm">
           <div className="flex items-center gap-4">
-            <a href="tel:+919100753313" className="flex items-center gap-1 hover:text-brand-accent transition-colors">
+            <a
+              href="tel:+919100753313"
+              className="flex items-center gap-1 hover:text-brand-accent transition-colors"
+            >
               <Phone className="w-4 h-4" />
               <span className="hidden sm:inline">+91 91007 53313</span>
             </a>
-            <a href="mailto:info@docsnpacks.com" className="flex items-center gap-1 hover:text-brand-accent transition-colors">
+            <a
+              href="mailto:info@docsnpacks.com"
+              className="flex items-center gap-1 hover:text-brand-accent transition-colors"
+            >
               <Mail className="w-4 h-4" />
               <span className="hidden sm:inline">info@docsnpacks.com</span>
             </a>
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <span>Hyderabad | Chennai | Delhi | Mumbai | Vizag | Pune | Bangalore</span>
+            <span>
+              Hyderabad | Chennai | Delhi | Mumbai | Vizag | Pune | Bangalore
+            </span>
           </div>
         </div>
       </div>
@@ -51,18 +59,18 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav
         className={`transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
-            : 'bg-white'
+          isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-brand-black rounded-lg flex items-center justify-center">
-                <span className="text-brand-blue font-bold text-lg lg:text-xl">DP</span>
-              </div>
+              <img
+                src="/images/logo.jpg"
+                alt="Docs N Packs Logo"
+                className="h-12 lg:h-16 w-auto object-contain rounded-sm"
+              />
               <div className="hidden sm:block">
                 <h1 className="text-brand-black font-bold text-lg lg:text-xl leading-tight">
                   DOCS N PACKS
@@ -79,8 +87,8 @@ export default function Navbar() {
                   to={link.path}
                   className={`relative font-medium text-sm transition-colors hover:text-brand-blue ${
                     location.pathname === link.path
-                      ? 'text-brand-blue'
-                      : 'text-brand-dark'
+                      ? "text-brand-blue"
+                      : "text-brand-dark"
                   }`}
                 >
                   {link.name}
@@ -117,7 +125,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden transition-all duration-300 overflow-hidden ${
-            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="bg-white border-t px-4 py-4 space-y-2">
@@ -127,8 +135,8 @@ export default function Navbar() {
                 to={link.path}
                 className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
                   location.pathname === link.path
-                    ? 'bg-brand-blue/10 text-brand-blue'
-                    : 'text-brand-dark hover:bg-gray-100'
+                    ? "bg-brand-blue/10 text-brand-blue"
+                    : "text-brand-dark hover:bg-gray-100"
                 }`}
               >
                 {link.name}

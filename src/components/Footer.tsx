@@ -1,30 +1,42 @@
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Instagram, Ship, Plane, Truck, Package } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Ship,
+  Plane,
+  Truck,
+  Package,
+} from "lucide-react";
 
 const quickLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Services', path: '/services' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Contact', path: '/contact' },
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "About Us", path: "/about" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const services = [
-  'Sea & Air Freight',
-  'Customs Clearance',
-  'Road Transportation',
-  'Warehousing & 3PL',
-  'Heavy Haulage',
-  'Courier Services',
+  "Sea & Air Freight",
+  "Customs Clearance",
+  "Road Transportation",
+  "Warehousing & 3PL",
+  "Heavy Haulage",
+  "Courier Services",
 ];
 
 const branches = [
-  'Hyderabad (HQ)',
-  'Chennai',
-  'Delhi',
-  'Mumbai',
-  'Vizag',
-  'Pune',
-  'Bangalore',
+  "Hyderabad (HQ)",
+  "Chennai",
+  "Delhi",
+  "Mumbai",
+  "Vizag",
+  "Pune",
+  "Bangalore",
 ];
 
 export default function Footer() {
@@ -36,29 +48,43 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-brand-blue font-bold text-xl">DP</span>
-              </div>
+              <img
+                src="/images/logo.jpg"
+                alt="Docs N Packs Logo"
+                className="h-16 w-auto object-contain rounded-lg bg-white p-1"
+              />
               <div>
                 <h3 className="font-bold text-lg">DOCS N PACKS</h3>
                 <p className="text-gray-400 text-sm">Logistics Solutions</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Leading Freight Forwarding & Customs Clearance company based in Hyderabad, 
-              serving clients across India and worldwide since 2019.
+              Leading Freight Forwarding & Customs Clearance company based in
+              Hyderabad, serving clients across India and worldwide since 2019.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -114,20 +140,28 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
                 <p className="text-gray-400 text-sm">
-                  G1 Golconda Heights Apartment,<br />
-                  Kohinoor Enclave, Puppalguda,<br />
+                  G1 Golconda Heights Apartment,
+                  <br />
+                  Kohinoor Enclave, Puppalguda,
+                  <br />
                   Hyderabad – 500089, India
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-brand-blue flex-shrink-0" />
-                <a href="tel:+919100753313" className="text-gray-400 hover:text-brand-blue transition-colors text-sm">
+                <a
+                  href="tel:+919100753313"
+                  className="text-gray-400 hover:text-brand-blue transition-colors text-sm"
+                >
                   +91 91007 53313
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-brand-blue flex-shrink-0" />
-                <a href="mailto:info@docsnpacks.com" className="text-gray-400 hover:text-brand-blue transition-colors text-sm">
+                <a
+                  href="mailto:info@docsnpacks.com"
+                  className="text-gray-400 hover:text-brand-blue transition-colors text-sm"
+                >
                   info@docsnpacks.com
                 </a>
               </div>
@@ -135,7 +169,7 @@ export default function Footer() {
             <div className="mt-4 pt-4 border-t border-white/10">
               <p className="text-gray-400 text-xs mb-2">Branch Offices:</p>
               <p className="text-brand-accent text-xs">
-                {branches.join(' | ')}
+                {branches.join(" | ")}
               </p>
             </div>
           </div>
