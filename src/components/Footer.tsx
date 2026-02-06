@@ -3,10 +3,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  Facebook,
-  Linkedin,
-  Twitter,
-  Instagram,
   Ship,
   Plane,
   Truck,
@@ -62,7 +58,7 @@ export default function Footer() {
               Leading Freight Forwarding & Customs Clearance company based in
               Hyderabad, serving clients across India and worldwide since 2019.
             </p>
-            <div className="flex gap-3">
+            {/* <div className="flex gap-3">
               <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors"
@@ -87,7 +83,7 @@ export default function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}

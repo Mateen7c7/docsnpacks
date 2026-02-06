@@ -1,64 +1,72 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { 
-  Phone, Mail, MapPin, Clock, Send, 
-  Building, User, MessageSquare
-} from 'lucide-react';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Label } from "@/components/ui/label";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+} from "lucide-react";
+import { toast } from "sonner";
 
 const contactInfo = [
   {
     icon: Phone,
-    title: 'Phone',
-    details: ['+91 91007 53313', '+91 90000 44285'],
-    href: 'tel:+919100753313',
+    title: "Phone",
+    details: ["+91 91007 53313", "+91 90000 44285"],
+    href: "tel:+919100753313",
   },
   {
     icon: Mail,
-    title: 'Email',
-    details: ['info@docsnpacks.com', 'helpdesk@docsnpacks.com'],
-    href: 'mailto:info@docsnpacks.com',
+    title: "Email",
+    details: ["info@docsnpacks.com", "helpdesk@docsnpacks.com"],
+    href: "mailto:info@docsnpacks.com",
   },
   {
     icon: Clock,
-    title: 'Working Hours',
-    details: ['Monday - Saturday', '9:00 AM - 6:00 PM IST'],
+    title: "Working Hours",
+    details: ["Monday - Saturday", "9:00 AM - 6:00 PM IST"],
     href: null,
   },
 ];
 
 const offices = [
   {
-    type: 'Head Office',
-    city: 'Hyderabad',
-    address: 'G1 Golconda Heights Apartment, Kohinoor Enclave, Puppalguda, Hyderabad – 500089, Telangana, India',
-    phone: '+91 91007 53313',
+    type: "Head Office",
+    city: "Hyderabad",
+    address:
+      "G1 Golconda Heights Apartment, Kohinoor Enclave, Puppalguda, Hyderabad – 500089, Telangana, India",
+    phone: "+91 91007 53313",
   },
   {
-    type: 'Branch Office',
-    city: 'Chennai',
-    address: '7th Floor, IIFL Tower, MGR Road, Kandanchavedi, Perungudi, Chennai – 600096, Tamil Nadu, India',
-    phone: '+91 91007 53313',
+    type: "Branch Office",
+    city: "Chennai",
+    address:
+      "7th Floor, IIFL Tower, MGR Road, Kandanchavedi, Perungudi, Chennai – 600096, Tamil Nadu, India",
+    phone: "+91 91007 53313",
   },
 ];
 
-const branches = ['Delhi', 'Mumbai', 'Vizag', 'Pune', 'Bangalore'];
+const branches = ["Delhi", "Mumbai", "Vizag", "Pune", "Bangalore"];
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    service: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -68,18 +76,18 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast.success('Thank you for your inquiry! We will get back to you soon.');
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    toast.success("Thank you for your inquiry! We will get back to you soon.");
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: '',
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      service: "",
+      message: "",
     });
     setIsSubmitting(false);
   };
@@ -97,7 +105,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-gray-400 text-lg">
-              Have a question or need a quote? Reach out to our team and we'll get back to you promptly.
+              Have a question or need a quote? Reach out to our team and we'll
+              get back to you promptly.
             </p>
           </div>
         </div>
@@ -108,7 +117,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactInfo.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-shadow"
               >
@@ -122,8 +131,8 @@ export default function Contact() {
                   {item.details.map((detail, dIndex) => (
                     <p key={dIndex} className="text-brand-gray">
                       {item.href ? (
-                        <a 
-                          href={item.href} 
+                        <a
+                          href={item.href}
                           className="hover:text-brand-blue transition-colors"
                         >
                           {detail}
@@ -145,7 +154,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
+            {/* <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-brand-dark mb-2">
                 Send Us a Message
               </h2>
@@ -277,7 +286,7 @@ export default function Contact() {
                   )}
                 </Button>
               </form>
-            </div>
+            </div> */}
 
             {/* Office Locations */}
             <div>
@@ -290,10 +299,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 {offices.map((office, index) => (
-                  <div 
-                    key={index}
-                    className="bg-brand-light rounded-xl p-6"
-                  >
+                  <div key={index} className="bg-brand-light rounded-xl p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-5 h-5 text-white" />
@@ -308,7 +314,7 @@ export default function Contact() {
                         <p className="text-brand-gray text-sm mt-2 leading-relaxed">
                           {office.address}
                         </p>
-                        <a 
+                        <a
                           href={`tel:${office.phone}`}
                           className="inline-flex items-center gap-2 text-brand-blue text-sm mt-3 hover:underline"
                         >
@@ -327,7 +333,7 @@ export default function Contact() {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {branches.map((city, index) => (
-                      <span 
+                      <span
                         key={index}
                         className="px-4 py-2 bg-brand-light rounded-lg text-brand-dark text-sm font-medium"
                       >
@@ -340,18 +346,16 @@ export default function Contact() {
 
               {/* Quick Contact */}
               <div className="mt-8 bg-brand-dark rounded-xl p-6 text-white">
-                <h3 className="text-lg font-semibold mb-4">
-                  Quick Contact
-                </h3>
+                <h3 className="text-lg font-semibold mb-4">Quick Contact</h3>
                 <div className="space-y-3">
-                  <a 
+                  <a
                     href="tel:+919100753313"
                     className="flex items-center gap-3 text-gray-300 hover:text-brand-accent transition-colors"
                   >
                     <Phone className="w-5 h-5" />
                     +91 91007 53313
                   </a>
-                  <a 
+                  <a
                     href="mailto:info@docsnpacks.com"
                     className="flex items-center gap-3 text-gray-300 hover:text-brand-accent transition-colors"
                   >
@@ -376,10 +380,10 @@ export default function Contact() {
                   Our Location
                 </h3>
                 <p className="text-brand-gray max-w-md mx-auto">
-                  G1 Golconda Heights Apartment, Kohinoor Enclave, Puppalguda, 
+                  G1 Golconda Heights Apartment, Kohinoor Enclave, Puppalguda,
                   Hyderabad – 500089, Telangana, India
                 </p>
-                <a 
+                {/* <a 
                   href="https://maps.google.com/?q=Hyderabad,Telangana,India"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -387,7 +391,7 @@ export default function Contact() {
                 >
                   <MapPin className="w-4 h-4" />
                   View on Google Maps
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -401,20 +405,24 @@ export default function Contact() {
             Ready to Get Started?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Let us handle your logistics needs while you focus on growing your business.
+            Let us handle your logistics needs while you focus on growing your
+            business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+919100753313">
-              <Button size="lg" className="bg-white text-brand-blue hover:bg-gray-100 font-semibold px-8">
+              <Button
+                size="lg"
+                className="bg-white text-brand-blue hover:bg-gray-100 font-semibold px-8"
+              >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Us Now
               </Button>
             </a>
             <a href="mailto:info@docsnpacks.com">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 font-semibold px-8"
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-white/30 text-white hover:bg-white/10 font-semibold px-8"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
