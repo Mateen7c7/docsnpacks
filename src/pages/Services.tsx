@@ -9,7 +9,7 @@ import {
 const mainServices = [
   {
     icon: Ship,
-    title: 'Sea & Air Freight Logistics',
+    title: 'Sea Freight Logistics',
     description: 'Comprehensive global shipping solutions via sea and air. We handle Full Container Load (FCL), Less Container Load (LCL), and charter services to all major ports worldwide.',
     features: [
       'FCL & LCL Shipping',
@@ -96,7 +96,7 @@ const mainServices = [
       'Door-to-Door Service',
       'Online Tracking',
     ],
-    image: '/images/courier-service.jpg',
+    image: '/images/courier-service.png',
   },
   {
     icon: MapPin,
@@ -109,7 +109,7 @@ const mainServices = [
       'Multi-location Collection',
       'Delivery Confirmation',
     ],
-    image: '/images/courier-service.jpg',
+    image: '/images/courier-shipment.webp',
   },
 ];
 

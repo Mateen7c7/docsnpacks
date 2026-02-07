@@ -1,13 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Ship,
-  Plane,
-  Truck,
-  Package,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Ship, Plane, Truck, Package } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", path: "/" },
@@ -136,11 +128,8 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
                 <p className="text-gray-400 text-sm">
-                  G1 Golconda Heights Apartment,
-                  <br />
-                  Kohinoor Enclave, Puppalguda,
-                  <br />
-                  Hyderabad – 500089, India
+                  SL Jubilee Building, 3rd Floor, Plot No. 1202 & 1215 A, Road
+                  No. 36, Jubilee Hills, Hyderabad, Telangana – 500 033, INDIA.
                 </p>
               </div>
               <div className="flex items-center gap-3">

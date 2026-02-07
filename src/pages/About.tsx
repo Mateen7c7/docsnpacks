@@ -265,7 +265,7 @@ export default function About() {
             <div className="lg:order-1 relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/images/sea-freight.jpg"
+                  src="/images/shipimg.jpeg"
                   alt="Container Lines"
                   className="w-full h-auto"
                 />
