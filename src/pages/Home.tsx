@@ -17,7 +17,7 @@ import {
 const services = [
   {
     icon: Ship,
-    title: "Sea & Air Freight",
+    title: "Sea Freight",
     description:
       "Global shipping solutions via sea and air with FCL, LCL, and charter services.",
     image: "/images/sea-freight.jpg",
