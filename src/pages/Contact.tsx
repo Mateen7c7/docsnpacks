@@ -41,7 +41,7 @@ const offices = [
     type: "Head Office",
     city: "Hyderabad",
     address:
-      "G1 Golconda Heights Apartment, Kohinoor Enclave, Puppalguda, Hyderabad – 500089, Telangana, India",
+      "SL Jubilee Building, 3rd Floor, Plot No. 1202 & 1215 A, Road No. 36, Jubilee Hills, Hyderabad, Telangana – 500 033, INDIA.",
     phone: "+91 91007 53313",
   },
   {
@@ -65,8 +65,6 @@ export default function Contact() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -98,8 +96,7 @@ export default function Contact() {
     setIsSubmitting(false);
   };
 
-
-  console.log(isSubmitting , handleSubmit , handleChange);
+  console.log(isSubmitting, handleSubmit, handleChange);
 
   return (
     <div className="min-h-screen pt-28">
@@ -390,8 +387,8 @@ export default function Contact() {
                   Our Location
                 </h3>
                 <p className="text-brand-gray max-w-md mx-auto">
-                  G1 Golconda Heights Apartment, Kohinoor Enclave, Puppalguda,
-                  Hyderabad – 500089, Telangana, India
+                  SL Jubilee Building, 3rd Floor, Plot No. 1202 & 1215 A, Road
+                  No. 36, Jubilee Hills, Hyderabad, Telangana – 500 033, INDIA.
                 </p>
                 {/* <a 
                   href="https://maps.google.com/?q=Hyderabad,Telangana,India"
