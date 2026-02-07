@@ -77,7 +77,7 @@ const values = [
 ];
 
 const branches = [
-  { city: 'Hyderabad', address: 'G1 Golconda Heights Apartment, Kohinoor Enclave, Puppalguda, Hyderabad – 500089', type: 'Head Office' },
+  { city: 'Hyderabad', address: 'SL Jubilee Building, 3rd Floor, Plot No. 1202 & 1215 A, Road No. 36, Jubilee Hills, Hyderabad, Telangana – 500 033, INDIA.', type: 'Head Office' },
   { city: 'Chennai', address: '7th Floor, IIFL Tower, MGR Road, Kandanchavedi, Perungudi, Chennai – 600096', type: 'Branch Office' },
   { city: 'Delhi', address: 'Delhi NCR Region', type: 'Branch Office' },
   { city: 'Mumbai', address: 'Mumbai, Maharashtra', type: 'Branch Office' },
